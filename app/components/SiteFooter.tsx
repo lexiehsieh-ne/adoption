@@ -3,7 +3,6 @@ import { MapPin, MessageCircle } from "lucide-react";
 import { CatMark } from "./CatMark";
 
 const NAV_LINKS = [
-  { href: "/", label: "首頁" },
   { href: "/cat-behavior", label: "貓咪習性" },
   { href: "/cat-mistakes", label: "常見錯誤" },
   { href: "/lucky-cat", label: "好運喵抽籤" },
