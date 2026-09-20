@@ -125,9 +125,9 @@ export default function Home() {
             alt="玳瑁小姊妹與手繪插畫"
             className="aspect-[4/3] w-full rotate-2"
           />
-          <div className="absolute -right-6 -top-6 z-10 flex h-24 w-24 rotate-6 flex-col items-center justify-center rounded-full border-4 border-dashed border-background bg-foreground text-center text-background shadow-lg">
-            <span className="text-[11px] font-bold leading-tight">年齡</span>
-            <span className="text-sm font-black leading-tight">約 3 個月</span>
+          <div className="absolute -right-3 -top-3 z-10 flex h-20 w-20 rotate-6 flex-col items-center justify-center rounded-full border-4 border-dashed border-background bg-foreground text-center text-background shadow-lg sm:-right-6 sm:-top-6 sm:h-24 sm:w-24">
+            <span className="text-[10px] font-bold leading-tight sm:text-[11px]">年齡</span>
+            <span className="text-xs font-black leading-tight sm:text-sm">約 3 個月</span>
           </div>
         </div>
       </section>

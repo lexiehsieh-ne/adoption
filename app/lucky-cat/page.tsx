@@ -107,7 +107,7 @@ const CAT_PATTERNS: CatPattern[] = [
       "黑白分明的花紋像穿著西裝，因此得名「賓士貓」。個性活潑聰明、互動性強，很適合喜歡跟貓咪玩耍互動的新手貓奴。",
   },
   {
-    name: "灰貓",
+    name: "藍貓",
     emoji: "🩶",
     color: "#a79c8e",
     textColor: "#3a2e28",
@@ -319,7 +319,7 @@ export default function LuckyCatPage() {
                   ? `transform ${SPIN_DURATION_MS}ms cubic-bezier(0.17, 0.67, 0.16, 0.99)`
                   : "none",
               }}
-              className="rounded-full shadow-lg"
+              className="h-full w-full rounded-full shadow-lg"
             />
           </div>
 
