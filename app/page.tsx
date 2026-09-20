@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
-import { MapPin, MessageCircle, PawPrint, Share2 } from "lucide-react";
+import { MapPin, MessageCircle, PawPrint } from "lucide-react";
 import { Ribbon } from "./components/Ribbon";
 import { Polaroid } from "./components/Polaroid";
 import { PhotoCarousel } from "./components/PhotoCarousel";
+import { VideoPreview } from "./components/VideoPreview";
+import { ShareButton } from "./components/ShareButton";
 
 function fileExists(name: string) {
   return fs.existsSync(
@@ -205,17 +207,11 @@ export default function Home() {
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {dailyVideos.map((video) => (
-              <div key={video.file} className="rounded-2xl bg-card p-2 shadow-xl">
-                <video
-                  src={`/images/${video.file}`}
-                  controls
-                  playsInline
-                  className="w-full rounded-xl"
-                />
-                <p className="mt-2 pb-1 text-center text-sm font-medium text-foreground/70">
-                  {video.caption}
-                </p>
-              </div>
+              <VideoPreview
+                key={video.file}
+                src={`/images/${video.file}`}
+                caption={video.caption}
+              />
             ))}
           </div>
         </section>
@@ -227,7 +223,7 @@ export default function Home() {
           <div className="mx-auto max-w-5xl px-6">
             <Ribbon>📸 貓咪寫真區</Ribbon>
             <h2 className="mt-5 text-2xl font-black text-foreground sm:text-3xl">
-              每一張都想帶回家
+              越看越心動
             </h2>
           </div>
 
@@ -306,14 +302,8 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="flex items-center gap-4 pt-6 sm:justify-center sm:pt-0">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-background/10">
-              <Share2 className="h-5 w-5" />
-            </span>
-            <div>
-              <p className="text-xs text-background/60">無法認養？</p>
-              <p className="font-bold">幫忙分享出去</p>
-            </div>
+          <div className="flex items-center pt-6 sm:justify-center sm:pt-0">
+            <ShareButton />
           </div>
         </div>
       </section>
